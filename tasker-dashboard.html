@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasker Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="center-middle">
+            <h1>Tasker Dashboard</h1>
+        </div>
+
+    
+        <div class="tasker-profile">
+            <!-- Profile picture upload section -->
+            <label for="profile-picture-input">
+                <img src="default-profile-picture.jpg" alt="Profile Picture" id="profile-picture">
+            </label>
+            <input type="file" id="profile-picture-input" accept="image/*" style="display: none;">
+            <!-- Tasker name -->
+            <span id="tasker-name"> tasker-name</span>
+        </div>
+        
+    </header>
+
+    <main class="container">
+        <section class="task-section left-section">
+            <h2 class="clickable">Available Jobs</h2>
+            <div id="available-jobs-list" class="job-list hidden">
+                <!-- Jobs will be dynamically populated here -->
+                <div class="job">
+                    <h3>Job Title</h3>
+                    <p>Description: minor mechanical services</p>
+                    <p>Location: Blantyre, mount pleasant</p>
+                    <p>Estimated Hours: 3 hours</p>
+                    <button class="accept-job-button green">Accept</button>
+                    <button class="decline-job-button red">Decline</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="task-section middle-section">
+            <h2 class="clickable">Previous Jobs</h2>
+            <div id="previous-jobs-list" class="job-list hidden">
+                <!-- Previous jobs will be dynamically populated here -->
+                <div class="previous-job">
+                    <h3><strong>Job Name : plumbing</strong></h3>
+                    <p><strong>Date:</strong> January 1, 2023</p>
+                    <p><strong>Location:</strong> Machinjiri</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="task-section right-section">
+            <h2>Add New Task</h2>
+            <form id="add-task-form">
+                <div class="form-group">
+                    <label for="task-name">Task Name:</label>
+                    <input type="text" id="task-name" name="task-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Experience:</label>
+                    <input type="text" id="experience" name="experience" required>
+                </div>
+                <div class="form-group">
+                    <label for="skills">Skills:</label>
+                    <input type="text" id="skills" name="skills" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="submit-task-button" class="green">Submit</button>
+                </div>
+            </form>
+        </section>
+        
+        <section class="task-section submit-complaints-section">
+            <h2>Submit Complaints</h2>
+            <form id="complaints-form">
+                <textarea id="complaints-text" placeholder="Enter your complaint"></textarea>
+                <button type="submit" id="submit-complaint-button" class="green">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Tasker Dashboard. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
